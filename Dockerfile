@@ -5,6 +5,18 @@ WORKDIR /app
 COPY ./composer.json ./
 COPY ./composer.lock ./
 
+RUN docker-php-ext-install sockets \
+    bz2 \
+    zip \
+    intl \
+    json \
+    curl \
+    dom \
+    gd \
+    libxml \
+    mbstring \
+    openssl \
+
 RUN composer install
 
 
