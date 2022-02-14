@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY ./composer.json ./
 COPY ./composer.lock ./
+RUN php -v
 
 RUN docker-php-ext-install sockets \
     bz2 \
