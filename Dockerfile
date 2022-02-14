@@ -15,7 +15,7 @@ RUN docker-php-ext-install sockets \
     gd \
     libxml \
     mbstring \
-    openssl \
+    openssl
 
 RUN composer install
 
